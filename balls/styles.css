@@ -1,0 +1,456 @@
+body {
+	background-color: #ffffff;
+	padding-bottom: 15px;
+}
+#page{
+	max-width: 1000px;
+	margin: auto;
+}
+#game{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
+	font-family: monospace;
+	background-color: #ffffff;
+	position: relative;
+}
+
+#game .game-center{
+	position: relative;
+}
+
+#game .game-center .game-layer{
+	width: 30%;
+	height: 100%;
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+#game .game-center .game-layer.left{
+	left: 0;
+}
+
+#game .game-center .game-layer.right{
+	right: 0;
+}
+
+#game .game-bottom{
+	min-height: calc(15vh + 100px);
+	width: 100%;
+}
+
+a{
+	color: #853747;
+	text-decoration: none;
+}
+
+hr{
+	border-style: solid;
+	border-color: #b16e7b;
+}
+
+.gif-container {
+	text-align: center;
+	overflow: hidden;
+}
+.crop-container{
+	margin-top: calc(-35%);
+	margin-bottom: calc(-33%);
+	position: relative;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	
+	  user-drag: none; 
+	  user-select: none;
+	  -moz-user-select: none;
+	  -webkit-user-drag: none;
+	  -webkit-user-select: none;
+	  -ms-user-select: none;
+}
+div{
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+#gif{
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+#main-menu{
+	font-weight: bold;
+}
+
+#main-menu>div{
+	text-align: center;
+	margin: 15px 0px;
+}
+
+#main-menu .game-start-btn{
+	font-size: min(calc(100% + 5vw), 63px);
+	cursor: pointer;
+		color: #964253;
+}
+
+#main-menu .game-start-btn:hover, #main-menu .main-menu-right-bottom .achievement-btn:hover{
+	opacity: 0.6;
+}
+
+#main-menu .high-score{
+	font-size:min(calc(100% + 2vw), 33px);
+	color: #604147;
+}
+
+#main-menu .main-menu-right-bottom .achievement-btn{
+	font-size: min(calc(100% + 2vw), 33px);
+	float: right;
+	color: #be7281;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+#game-action-menu{
+	text-align: center;
+}	
+
+#game-action-menu .button{
+	cursor: pointer;
+	font-size: min(calc(100% + 4vw), 44px);
+	
+}
+
+.game-action-menu-btn div {
+	margin: 15px 0px;
+}
+	
+#game-action-menu .button:hover{
+	opacity: 0.6;
+	background: #ffb5b5;
+}
+
+#game-action-menu .question{
+	opacity: 0.6;
+	font-weight: bold;
+	color: #964253;
+	font-size: min(calc(100% + 4vw), 55px);
+}
+
+#game-action-menu .question.twoline{
+	font-size: min(calc(100% + 3vw), 43px);
+}
+
+
+#game-action-menu .question.threeline{
+	font-size: min(calc(100% + 2vw), 33px);
+}
+
+@media screen and (max-width: 821px) {
+	        
+	.game-action-menu-btn div {
+		margin: 20px 0px;
+	}
+	.game-action-menu-btn .button {
+		font-size: min(calc(100% + 5vw), 55px) !important;
+        border: 1px solid #b16e7b33;
+        padding: 2px 5px;
+	}
+}
+
+
+/* toolbar*/
+.tool-bar{
+	padding-bottom: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tool-bar .guide .guide-btn{
+	background: #ffb5b5;
+	padding: 8px;
+	border-radius: 50%;
+	width: 18px;
+	aspect-ratio: 1;
+	text-align: center;
+	cursor: pointer;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.tool-bar .guide .guide-btn:hover{
+	box-shadow: inset 1px 1px 1px 1px #7878787a;
+}
+
+.tool-bar .lang{
+	display: flex;
+	flex-direction: row;
+}
+
+.tool-bar .lang span{
+	align-self: center;
+}
+
+.tool-bar .lang div{
+	cursor: pointer;
+	margin: 0px 5px;
+	box-shadow: 1px 1px 1px 0px #9796967a;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.tool-bar .lang div.select{
+	background: #ffe4e4;
+}
+
+.tool-bar .lang div.select:hover{
+	background: #f1d6d6;
+}
+
+.tool-bar .lang div:hover{
+	box-shadow: inset 1px 1px 1px 0px #9796967a;
+	background: #f9f9f9;
+}
+
+#message-text{
+	font-size: min(calc(100% + 3vw), 43px);
+	color: #964253;
+	padding: 0px 15px;
+	text-align: center;
+}
+
+
+#message .message-button-container{
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+}
+
+#message .message-button-container .message-button, .giveup-button-container .giveup-button{
+		
+	cursor: pointer;
+	padding: 5px 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: min(calc(100% + 2vw), 33px);
+		border-radius: 10px;
+		background: #964253;
+	color: #FFFFFF;
+}
+#message .message-button-container .message-button{
+	width: 25%;
+}
+
+
+
+#message .message-button-container .message-button:hover, .giveup-button-container .giveup-button:hover{
+	border: 1px solid #964253;
+	background: #FFFFFF;
+	color: #964253;
+}
+
+.giveup-button-container{
+	text-align: left;
+}
+
+
+/* author */
+#author-container, #develop-log{
+	margin: 30px 10px 0px 10px;
+}
+
+#author-container .author-card, #develop-log .develop-card{
+	box-shadow: 1px 1px 2px 0px #420e0052;
+	padding: 20px;
+	text-align: center;
+		border-radius: 3px;
+}
+
+#author-container .author-card{
+	background: #ffb5b5;
+}
+
+#author-container .icon{
+	border-radius: 50%;
+	width: 75px;
+	cursor: pointer;
+}
+
+#author-container .icon:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 5px 0px #ffffff7d;
+}
+
+/* develop-log */
+#develop-log .develop-card{
+	background: #964253;
+	color: white;
+}
+#develop-log .develop-card-row{
+	padding: 10px;
+}
+#develop-log .develop-card-row:not(:first-child){
+	border-top: 1px solid;
+}
+
+/* guide / achievement */
+#guide-container, #achievement-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+#guide-container .guide-layer, #achievement-container .achievement-layer{
+	width: 100%;
+	height: 100%;
+	background: #230d0d6e;
+}
+
+#guide-container .guide-box, #achievement-container .achievement-box{
+	width: 75%;
+	position: absolute;
+	top: 10px;
+	background: #ffb5b5;
+	border-radius: 10px;
+	transform: translateX(-50%);
+	left: 50%;
+		box-shadow: 1px 1px 1px 0px #4600003d;
+	max-height: calc(100% - 20px);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+#guide-container .guide-box .guide-content, #achievement-container .achievement-box #achievement-content{
+	margin: 20px;
+	overflow-y: auto;
+}
+
+#guide-container .guide-box .guide-content img{
+	margin: 10px 0px;
+}
+
+#guide-container .close-guide-btn, #achievement-container .close-achievement-btn{
+	background: #ffffff;
+	padding: 5px;
+	border-radius: 50%;
+	margin: 0px auto 5px auto;
+	aspect-ratio: 1;
+	width: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#achievement-container #achievement-content .achievement-row{
+
+	background: #ffffff6e;
+	color: #0000006e;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#achievement-container #achievement-content .achievement-row.done{
+	
+	background: #ffffff;
+	color: #000000;
+}
+
+#achievement-container #achievement-content .achievement-row .achievement-title{
+	font-weight: bold;
+}
+
+#achievement-container #achievement-content .achievement-row .status{
+	text-align: right;
+}
+
+#turn-count-container{
+	font-size: min(calc(60% + 1vw), 18px);
+	text-align: center;
+	color: #afafaf;
+}
+
+.url-container{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	color: #adadad;
+    font-size: 0.9em;
+}
+
+.url-container #url{
+	line-break: anywhere;
+}
+
+.metadata{
+    display: flex;
+	width: 100%;
+}
+.metadata div{
+	width: 50%;
+}
+.metadata div:nth-child(1){
+	text-align: left;
+}
+.metadata div:nth-child(2){
+	text-align: right;
+}
+
+#author-container .author-banner{
+	border-radius: 10px;
+}
+
+.social-media{
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.social-media>div{
+	height: 40px;
+    width: 40px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.social-media>div:hover{
+	opacity: 0.6;
+}
+
+#loading-layer{
+	position: absolute;
+    background: #ffffffe0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    align-content: center;
+    text-align: center;
+	font-weight: bold;
+    font-size: min(calc(100% + 10vw), 120px);
+    color: #964253;
+}
+
+.text-description{
+	display: none;
+    font-size: 0.01em;
+    color: #cfcfcf;
+    opacity: 0;
+}
+
+.home-header{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.home-header.home{
+	cursor: pointer;
+}
