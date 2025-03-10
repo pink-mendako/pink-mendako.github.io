@@ -25,6 +25,7 @@ fetch('footer.html')
 	parentDiv.addEventListener('mouseout', function handleLangMouseOut() {
 		parentDiv.className = 'mendako-header show';
 	});
+	(adsbygoogle = window.adsbygoogle || []).push({});
 })
 .catch(error => {
 	console.error('There was a problem with the fetch operation:', error);
